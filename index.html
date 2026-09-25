@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About Us | Arthvex</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0b0b;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      width: 100%;
+      padding: 20px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #222;
+      background: #0b0b0b;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: 2px;
+      color: #ffffff;
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: #aaa;
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 430px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      background:
+        radial-gradient(circle at center, #202020 0%, #0b0b0b 60%);
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: clamp(45px, 8vw, 85px);
+      letter-spacing: 5px;
+      margin-bottom: 15px;
+      font-weight: 900;
+    }
+
+    .hero p {
+      color: #bdbdbd;
+      font-size: 18px;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    /* MAIN */
+    main {
+      max-width: 1150px;
+      margin: auto;
+      padding: 80px 25px;
+    }
+
+    .section {
+      margin-bottom: 90px;
+    }
+
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 20px;
+      font-weight: 800;
+    }
+
+    .section-title span {
+      color: #888;
+    }
+
+    .section p {
+      color: #bcbcbc;
+      font-size: 17px;
+      max-width: 850px;
+    }
+
+    /* CARDS */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .card {
+      background: #151515;
+      border: 1px solid #252525;
+      padding: 35px 25px;
+      border-radius: 15px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: #555;
+      background: #191919;
+    }
+
+    .card-icon {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #999;
+    }
+
+    /* MISSION */
+    .mission {
+      background: #151515;
+      border: 1px solid #252525;
+      border-radius: 20px;
+      padding: 55px;
+      text-align: center;
+    }
+
+    .mission h2 {
+      font-size: 38px;
+      margin-bottom: 18px;
+    }
+
+    .mission p {
+      margin: auto;
+      color: #aaa;
+      max-width: 750px;
+      font-size: 17px;
+    }
+
+    /* STATS */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .stat {
+      padding: 30px 15px;
+      border: 1px solid #252525;
+      border-radius: 15px;
+      background: #111;
+    }
+
+    .stat h3 {
+      font-size: 35px;
+      margin-bottom: 5px;
+    }
+
+    .stat p {
+      font-size: 14px;
+      color: #888;
+    }
+
+    /* CTA */
+    .cta {
+      text-align: center;
+      padding: 70px 20px;
+      border-top: 1px solid #222;
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      color: #999;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 30px;
+      background: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: 700;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #dcdcdc;
+      transform: scale(1.04);
+    }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid #222;
+      text-align: center;
+      padding: 30px 20px;
+      color: #777;
+      font-size: 14px;
+    }
+
+    footer strong {
+      color: #fff;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+
+      header {
+        padding: 18px 5%;
+      }
+
+      .logo {
+        font-size: 23px;
+      }
+
+      nav a {
+        margin-left: 12px;
+        font-size: 13px;
+      }
+
+      .hero {
+        min-height: 360px;
+        padding: 60px 20px;
+      }
+
+      .hero h1 {
+        letter-spacing: 3px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      main {
+        padding: 60px 18px;
+      }
+
+      .section {
+        margin-bottom: 65px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .mission {
+        padding: 35px 20px;
+      }
+
+      .mission h2 {
+        font-size: 30px;
+      }
+
+      .cta h2 {
+        font-size: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">ARTHVEX</div>
+
+    <nav>
+      <a href="https://arthvex.qikink.com">Store</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>ARTHVEX</h1>
+
+      <p>
+        Style that speaks for you.
+        Discover a collection built for people who want
+        to express their personality through what they wear.
+      </p>
+    </div>
+  </section>
+
+
+  <main>
+
+    <!-- ABOUT -->
+    <section class="section">
+      <h2 class="section-title">
+        About <span>Arthvex</span>
+      </h2>
+
+      <p>
+        Arthvex is a modern fashion brand focused on creating
+        stylish, comfortable and expressive products for everyday life.
+        We believe that fashion is more than just clothing —
+        it's a way to express who you are.
+      </p>
+
+      <br>
+
+      <p>
+        From simple everyday styles to statement pieces,
+        Arthvex aims to bring designs that feel fresh, unique
+        and easy to make your own.
+      </p>
+    </section>
+
+
+    <!-- WHY ARTHVEX -->
+    <section class="section">
+
+      <h2 class="section-title">
+        Why <span>Arthvex?</span>
+      </h2>
+
+      <div class="cards">
+
+        <div class="card">
+          <div class="card-icon">✦</div>
+
+          <h3>Unique Style</h3>
+
+          <p>
+            Designs created to help you stand out
+            while keeping your personal style at the center.
+          </p>
+        </div>
+
+
+        <div class="card">
+          <div class="card-icon">◈</div>
+
+          <h3>Quality Focus</h3>
+
+          <p>
+            We focus on bringing products that combine
+            comfort, style and everyday usability.
+          </p>
+        </div>
+
+
+        <div class="card">
+          <div class="card-icon">↗</div>
+
+          <h3>Made For You</h3>
+
+          <p>
+            Our goal is to create products that fit naturally
+            into your everyday lifestyle.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- MISSION -->
+    <section class="section">
+
+      <div class="mission">
+
+        <h2>Our Mission</h2>
+
+        <p>
+          Our mission is simple: make modern fashion more
+          expressive, accessible and enjoyable.
+          We want every Arthvex product to feel like
+          something you chose because it represents you.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- STATS -->
+    <section class="section">
+
+      <h2 class="section-title">
+        The <span>Arthvex Spirit</span>
+      </h2>
+
+      <div class="stats">
+
+        <div class="stat">
+          <h3>01</h3>
+          <p>Unique Identity</p>
+        </div>
+
+        <div class="stat">
+          <h3>∞</h3>
+          <p>Ideas & Creativity</p>
+        </div>
+
+        <div class="stat">
+          <h3>100%</h3>
+          <p>Passion for Style</p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- CTA -->
+  <section class="cta">
+
+    <h2>Find Your Style</h2>
+
+    <p>
+      Explore the latest Arthvex collection.
+    </p>
+
+    <a
+      class="btn"
+      href="https://arthvex.qikink.com"
+      target="_blank">
+      Visit Arthvex Store
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 <strong>Arthvex</strong>. All rights reserved.
+  </footer>
+
+</body>
+</html>
